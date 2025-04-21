@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+  <!-- Header -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/equationText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="0 + 0 = ?"
+      android:textSize="32sp"
+      android:textStyle="bold"
+      android:textColor="@color/white"
+      android:fontFamily="@font/roboto_condensed_variable"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="40dp" />
+
+  <!-- Score and Timer -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/scoreText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Score: 0"
+      android:textSize="18sp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/equationText"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="16dp" />
+
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/timerText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Time: 10s"
+      android:textSize="18sp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/equationText"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp" />
+
+  <!-- Answer Buttons -->
+  <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/card_background"
+      app:layout_constraintTop_toBottomOf="@id/scoreText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.9"
+      android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer2"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer3"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnswer4"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+
+      </LinearLayout>
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+  <ProgressBar
+      android:id="@+id/readyProgressBar"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="440dp"
+      android:max="5"
+      android:progress="0"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/timerText"
+      style="@android:style/Widget.ProgressBar.Horizontal"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

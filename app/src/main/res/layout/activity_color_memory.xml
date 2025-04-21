@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+  <!-- Header -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/instructionText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Watch the color sequence!"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      android:textColor="@color/white"
+      android:fontFamily="@font/roboto_condensed_variable"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="20dp" />
+
+  <!-- Score and Timer -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/scoreText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Score: 0"
+      android:textSize="18sp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/instructionText"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp"
+       />
+
+
+  <!-- Color Buttons Container -->
+  <TextView
+      android:id="@+id/timerText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="Time: 20s"
+      android:textColor="@android:color/white"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.857"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/instructionText"
+      />
+  <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/card_background"
+      app:layout_constraintTop_toBottomOf="@id/scoreText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.9"
+      android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <View
+            android:id="@+id/colorBtn1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="8dp" />
+
+        <View
+            android:id="@+id/colorBtn2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="8dp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <View
+            android:id="@+id/colorBtn3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="8dp" />
+
+        <View
+            android:id="@+id/colorBtn4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_margin="8dp" />
+      </LinearLayout>
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

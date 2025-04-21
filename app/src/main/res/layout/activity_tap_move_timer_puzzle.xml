@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- 顶部状态栏 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#44000000"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 计时器文本 -->
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间: 30秒"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- 移动次数文本 -->
+        <TextView
+            android:id="@+id/moveCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="移动次数: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 关卡文本 -->
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关卡: 1"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toBottomOf="@id/timerText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- 分数文本 -->
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分数: 0"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-condensed"
+            app:layout_constraintTop_toBottomOf="@id/moveCountText"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- 关卡进度条 -->
+        <ProgressBar
+            android:id="@+id/levelProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:progressTint="#FFEB3B"
+            android:progressBackgroundTint="#33FFFFFF"
+            app:layout_constraintTop_toBottomOf="@id/levelText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:max="5"
+            android:progress="0"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 游戏容器 -->
+    <FrameLayout
+        android:id="@+id/gameContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/controlsContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 游戏目标1 (真实目标) -->
+        <ImageView
+            android:id="@+id/realTarget"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="20dp"/>
+
+        <!-- 游戏目标2 (假目标) -->
+        <ImageView
+            android:id="@+id/fakeTarget"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="20dp"/>
+
+        <!-- 障碍物 -->
+        <ImageView
+            android:id="@+id/obstacleObject"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:visibility="invisible"/>
+
+        <!-- 移动物体 -->
+        <ImageView
+            android:id="@+id/movableObject"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <!-- 底部控制栏 -->
+    <LinearLayout
+        android:id="@+id/controlsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#44000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 暂停按钮 -->
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="暂停"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

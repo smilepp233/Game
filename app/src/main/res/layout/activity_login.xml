@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+  <!-- Title with Custom Font -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/loginTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Brain Puzzle"
+      android:textSize="36sp"
+      android:textStyle="bold"
+      android:fontFamily="@font/roboto_condensed"
+      android:textColor="#FFFFFF"
+      android:shadowColor="#80000000"
+      android:shadowDx="2"
+      android:shadowDy="2"
+      android:shadowRadius="4"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="60dp" />
+
+  <!-- 其餘部分保持不變 -->
+  <androidx.cardview.widget.CardView
+      android:id="@+id/loginCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="16dp"
+      app:cardElevation="8dp"
+      app:cardBackgroundColor="#F5F5F5"
+      app:layout_constraintTop_toBottomOf="@id/loginTitle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.85"
+      android:layout_marginTop="40dp"
+      android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/usernameLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:hintEnabled="true"
+          android:hint="Username"
+          style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#212121"
+            android:textColorHint="#757575" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:id="@+id/passwordLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          app:hintEnabled="true"
+          android:hint="Password"
+          app:passwordToggleEnabled="true"
+          style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="#212121"
+            android:textColorHint="#757575" />
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/buttonLogin"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="24dp"
+          android:text="Login"
+          android:textColor="#FFFFFF"
+          app:backgroundTint="#FF5722"
+          app:cornerRadius="8dp"
+          app:strokeColor="@color/primary"
+          style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+      />
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/buttonRegisterRedirect"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:text="Create New Account"
+          android:textColor="#FF5722"
+          app:backgroundTint="@android:color/transparent"
+          style="@style/Widget.Material3.Button.TextButton" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

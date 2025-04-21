@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Primary Colors -->
+  <color name="primary">#3F51B5</color>        <!-- A vibrant purple for main actions/buttons -->
+  <color name="primary_dark">#303F9F</color>   <!-- Darker variant for depth -->
+  <color name="primary_light">#BB86FC</color>  <!-- Lighter variant for highlights -->
+
+  <!-- Accent Colors -->
+  <color name="accent">#FF4081</color>         <!-- A teal accent for secondary elements -->
+  <color name="accent_dark">#018786</color>    <!-- Darker teal for contrast -->
+
+  <!-- Background Colors -->
+  <color name="card_background">#F4E0C9</color>  <!-- Semi-transparent white for cards -->
+  <color name="white">#FFFFFF</color>         <!-- Pure white for text -->
+  <color name="black">#000000</color>         <!-- Pure black for shadows -->
+  <color name="light_gray">#D3D3D3</color>    <!-- Light gray for subtle elements -->
+
+  <!-- Text Colors -->
+  <color name="text_primary">#FFFFFF</color>   <!-- White for primary text -->
+  <color name="text_secondary">#B0FFFFFF</color> <!-- Slightly transparent white for secondary text -->
+
+  <!-- Gradient Background -->
+  <color name="gradient_start">#FF5722</color>
+  <color name="gradient_end">#E91E63</color>
+  <color name="primary_color">#3F51B5</color>
+
+
+
+
+  <!-- Additional Utility Colors -->
+  <color name="shadow">#80000000</color>       <!-- Semi-transparent black for shadows -->
+  <color name="gray_light">#E0E0E0</color>     <!-- Another light gray variant -->
+  <color name="error">#CF6679</color>
+
+
+  <color name="primaryColor">#3F51B5</color>
+  <color name="primaryTextColor">#212121</color>
+  <color name="secondaryTextColor">#757575</color>
+  <color name="backgroundColor">#FFFFFF</color>
+  <color name="appBarBackground">#3F51B5</color>
+  <color name="appBarTitleText">#FFFFFF</color>
+
+</resources>

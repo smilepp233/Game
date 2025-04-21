@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+  <!-- Header -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/instructionText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Watch the sequence!"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      android:textColor="@color/white"
+      android:fontFamily="@font/roboto_condensed_variable"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="20dp" />
+
+  <!-- Score Display -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/scoreText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Score: 0"
+      android:textSize="18sp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/instructionText"
+      app:layout_constraintStart_toStartOf="parent"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="16dp" />
+
+  <!-- Timer Display -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/timerText"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Time: 15s"
+      android:textSize="18sp"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@id/instructionText"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="16dp" />
+
+  <!-- Game Buttons Grid -->
+  <androidx.cardview.widget.CardView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/card_background"
+      app:layout_constraintTop_toBottomOf="@id/scoreText"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.9"
+      android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            app:backgroundTint="@color/primary"
+            app:cornerRadius="10dp"
+            android:layout_margin="8dp" />
+      </LinearLayout>
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

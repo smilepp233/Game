@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/textViewWelcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Welcome!"
+      android:textSize="24sp"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+  <!-- 音乐控制按钮 -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btnToggleMusic"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="16dp"
+      android:contentDescription="开关背景音乐"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:srcCompat="@android:drawable/ic_media_play" />
+
+  <!-- Header with Cool Title -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/headerTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="BrainOut"
+      android:textSize="32sp"
+      android:textStyle="bold"
+      android:fontFamily="@font/roboto_condensed_variable"
+      android:textColor="@color/white"
+      android:shadowColor="#80000000"
+      android:shadowDx="3"
+      android:shadowDy="3"
+      android:shadowRadius="6"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="40dp" />
+
+  <!-- Card for Puzzle Buttons -->
+  <androidx.cardview.widget.CardView
+      android:id="@+id/puzzleCard"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="20dp"
+      app:cardElevation="10dp"
+      app:cardBackgroundColor="@color/card_background"
+      app:layout_constraintTop_toBottomOf="@id/headerTitle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.9"
+      android:layout_marginTop="30dp"
+      android:padding="16dp">
+      
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+      <!-- Tap Coordinate Puzzle Button -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnTapCoordinatePuzzle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Tap Coordinate Puzzle"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnMoveOverlapPuzzle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Move Overlap Puzzle"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnTapMoveTimerPuzzle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Tap Move Timer Puzzle"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <!-- VR -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnVRGame"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="NFC猜拳王"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <!-- Shake Move Puzzle Button -->
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnShakeMoveCoordinatePuzzle"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Shake Move Puzzle"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnColorSwitchMadness"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Color Switch Madness"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnReactionSequenceChallenge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Reaction Sequence Challenge"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnMathSpeedChallenge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Math Speed Challenge"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnColorMemoryChallenge"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Color Memory Challenge"
+          android:textColor="@color/white"
+          app:backgroundTint="@color/primary"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btnTricksterPath"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="诡计迷宫 (超难!)"
+          android:textColor="@color/white"
+          app:backgroundTint="#FF5722"
+          app:cornerRadius="10dp"
+          app:iconTint="@color/white"
+          android:layout_marginBottom="12dp"
+          style="@style/Widget.Material3.Button.ElevatedButton" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+  <!-- Fancy Divider -->
+  <View
+      android:id="@+id/divider"
+      android:layout_width="0dp"
+      android:layout_height="2dp"
+      android:background="@color/accent"
+      app:layout_constraintTop_toBottomOf="@id/puzzleCard"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintWidth_percent="0.7"
+      android:layout_marginTop="20dp" />
+
+  <!-- Scoreboard Teaser -->
+  <com.google.android.material.textview.MaterialTextView
+      android:id="@+id/scoreboardTeaser"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Check Top Players!"
+      android:textSize="16sp"
+      android:textColor="@color/white"
+      android:fontFamily="@font/roboto_condensed_variable"
+      app:layout_constraintTop_toBottomOf="@id/divider"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="20dp" />
+
+  <!-- Floating Action Buttons -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnScoreboard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Scoreboard"
+      android:textColor="@color/accent"
+      app:backgroundTint="@android:color/system_accent1_0"
+      app:iconTint="@color/accent"
+      app:layout_constraintTop_toBottomOf="@id/scoreboardTeaser"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="16dp"
+      style="@style/Widget.Material3.Button.TextButton"
+      tools:targetApi="s"
+      />
+
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnRegister"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Register"
+      app:backgroundTint="@android:color/system_accent1_0"
+      android:textColor="@color/accent"
+      app:iconTint="@color/accent"
+      app:layout_constraintTop_toBottomOf="@id/btnScoreboard"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginTop="12dp"
+      style="@style/Widget.Material3.Button.TextButton"
+      tools:targetApi="s"
+      />
+
+  <!-- FAB for Login -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/btnLogin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:backgroundTint="@color/primary"
+      app:tint="@color/white"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      android:layout_marginBottom="20dp"
+      android:layout_marginEnd="20dp"
+      android:contentDescription="Login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
